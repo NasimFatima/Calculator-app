@@ -1,3 +1,1 @@
-import { MainScreenComponent } from './TextScreen'
-
-export const MainScreen = MainScreenComponent
+export { MainScreen } from './MainScreen'

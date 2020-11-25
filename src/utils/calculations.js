@@ -17,10 +17,10 @@ const evaluate = formula => {
   return func();
 }
 
-const formatResponse = (success = true, result = '', errorString = '') => {
+const formatResponse = (success = true, data = '', errorString = '') => {
   return {
     success: success,
-    result: result,
+    data: data,
     errorString: errorString,
   };
 };

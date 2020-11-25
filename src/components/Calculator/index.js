@@ -1,3 +1,1 @@
-import { CalculatorComponent } from './Calculator';
-
-export const Calculator = CalculatorComponent;
+export { Calculator } from './Calculator';

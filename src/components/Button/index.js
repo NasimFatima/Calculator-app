@@ -1,3 +1,2 @@
-import { ButtonComponent } from './Button'
+export { Button } from './Button'
 
-export const Button = ButtonComponent

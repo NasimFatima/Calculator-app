@@ -3,11 +3,11 @@ import React from 'react';
 
 import { Box, Error, Expression } from './style';
 
-export const TextScreenComponent = ({ value, error }) => {
+export const TextScreenComponent = ({ expression, error }) => {
   return (
     <Box>
       {error.length === 0 ? (
-        <Expression> {value} </Expression>
+        <Expression> {expression} </Expression>
       ) : (
           <Error> {error} </Error>
         )}

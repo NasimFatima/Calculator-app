@@ -4,7 +4,7 @@ export const OPERATORS_MAPPING = {
 };
 
 //// Sort by order display on screen
-export const BUTTONS = [
+export const BUTTONS_SYMBOL = [
   '7',
   '8',
   '9',

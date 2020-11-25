@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const StyledButton = styled.button`
+export const StyledButton = styled.button`
   display: flex;
   flex: 0 1 25%;
   justify-content: center;
@@ -13,5 +13,3 @@ const StyledButton = styled.button`
   background: -webkit-linear-gradient(top, #d2d2d2, #ddd);
   font-size: 2em;
 `;
-
-export default StyledButton;

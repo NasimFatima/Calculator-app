@@ -1,12 +1,12 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 
-import Button from '../button/button';
-import { BUTTONS } from '../../utils/constants';
-import TextScreen from '../textScreen/textScreen';
+import { Button } from '../Button/index';
+import { BUTTONS_SYMBOL } from '../../utils/constants';
+import { TextScreen } from '../TextScreen/index';
 import { Container, Wrapper } from './style';
 
-const MainScreen = props => {
+export const MainScreenComponent = props => {
   const { result, calculate, error } = props;
   return (
     <Container>
@@ -14,7 +14,7 @@ const MainScreen = props => {
       <TextScreen value={result} error={error}></TextScreen>
 
       <Wrapper>
-        {BUTTONS.map(item => (
+        {BUTTONS_SYMBOL.map(item => (
           <Button key={item} value={item} onClick={calculate}>
             {item}
           </Button>
@@ -23,5 +23,3 @@ const MainScreen = props => {
     </Container>
   );
 };
-
-export default MainScreen;

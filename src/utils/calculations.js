@@ -1,17 +1,26 @@
-import { VerifyExpression, formatExprssionForCalculations } from './validators'
+import { VerifyExpression, formatExprssionForCalculations } from './validators';
 
-const response = {
-  'success': true,
-  'result': '',
-  'errorString': 'Malformed Expression'
+export const evaluateExpression = expression => {
+  try {
+    if (VerifyExpression(expression)) {
+      expression = formatExprssionForCalculations(expression);
+      const result = evaluate(expression);
+      return formatResponse(true, result, '');
+    }
+  } catch (err) {
+    return formatResponse(false, '', 'Malformed Expression');
+  }
+};
+
+const evaluate = formula => {
+  var func = new Function('return ' + formula);
+  return func();
 }
 
-export const evaluateExpression = (expression) => {
-  try {
-    if (VerifyExpression(expression))
-      response['result'] = eval(formatExprssionForCalculations(expression)).toString();
-  } catch (err) {
-    response['success'] = false
-  }
-  return response
+const formatResponse = (success = true, result = '', errorString = '') => {
+  return {
+    success: success,
+    result: result,
+    errorString: errorString,
+  };
 };

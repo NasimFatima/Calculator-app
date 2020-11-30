@@ -7,7 +7,7 @@ import { Button } from '../Button/index';
 import { BUTTONS_SYMBOL } from '../../utils/constants';
 import { TextScreen } from '../TextScreen/index';
 import { Container, Wrapper } from './style';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import {
   calculateExpression,
   clearExpression,
@@ -15,11 +15,9 @@ import {
 } from '../../redux';
 
 export const MainScreen = () => {
-  const state = useSelector(state => state.calculator);
-  console.log('state::', state);
   const dispatch = useDispatch();
 
-  const dispatchMapping = event => {
+  const handleClick = event => {
     const value = event.target.value;
     if (value === '=') dispatch(calculateExpression());
     else if (value === 'AC') dispatch(clearExpression());
@@ -33,7 +31,7 @@ export const MainScreen = () => {
 
       <Wrapper>
         {BUTTONS_SYMBOL.map(item => (
-          <Button key={item} value={item} onClick={dispatchMapping}>
+          <Button key={item} value={item} onClick={handleClick}>
             {item}
           </Button>
         ))}

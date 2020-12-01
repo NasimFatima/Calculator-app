@@ -1,4 +1,4 @@
-import { CLEAR, CALCULATE_EXPRESSION, SET_EXPRESSION } from './calculatorType';
+import { CLEAR, CALCULATE_EXPRESSION, SET_EXPRESSION } from '../Type/calculatorType';
 
 export const clearExpression = () => {
   return {

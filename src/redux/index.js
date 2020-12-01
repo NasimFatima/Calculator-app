@@ -1,1 +1,1 @@
-export * from './calculator/calculatorActions';
+export * from './Actions/calculatorActions';

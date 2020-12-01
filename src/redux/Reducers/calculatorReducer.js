@@ -1,5 +1,5 @@
 /* eslint-disable no-fallthrough */
-import { CALCULATE_EXPRESSION, CLEAR, SET_EXPRESSION } from './calculatorType';
+import { CALCULATE_EXPRESSION, CLEAR, SET_EXPRESSION } from '../Type/calculatorType';
 import { evaluateExpression } from '../../utils/calculations';
 import { isOperand } from '../../utils/validators';
 

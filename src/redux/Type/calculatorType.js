@@ -1,3 +1,1 @@
-export const CLEAR = 'CLEAR';
-export const CALCULATE_EXPRESSION = 'CALCULATE_EXPRESSION';
-export const SET_EXPRESSION = 'SET_EXPRESSION';
+export const CALCULATE = 'CALCULATE';

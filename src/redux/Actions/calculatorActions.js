@@ -1,20 +1,8 @@
-import { CLEAR, CALCULATE_EXPRESSION, SET_EXPRESSION } from '../Type/calculatorType';
+import { CALCULATE } from '../Type/calculatorType';
 
-export const clearExpression = () => {
+export const setCalculatorState = (data) => {
   return {
-    type: CLEAR,
+    type: CALCULATE,
+    payload: data
   };
-};
-
-export const calculateExpression = () => {
-  return {
-    type: CALCULATE_EXPRESSION,
-  };
-};
-
-export const setExpression = value => {
-  return {
-    type: SET_EXPRESSION,
-    payload: value,
-  };
-};
+}

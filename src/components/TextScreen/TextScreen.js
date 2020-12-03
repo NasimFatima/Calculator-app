@@ -5,13 +5,13 @@ import { Box, Error, Expression } from './style';
 import { useSelector } from 'react-redux';
 
 export const TextScreenComponent = () => {
-  const state = useSelector(state => state.calculator);
+  const { error, expression } = useSelector(state => state.calculator);
   return (
     <Box>
-      {!state.error ? (
-        <Expression> {state.expression} </Expression>
+      {!error ? (
+        <Expression> {expression} </Expression>
       ) : (
-          <Error> {state.error} </Error>
+          <Error> {error} </Error>
         )}
     </Box>
   );
